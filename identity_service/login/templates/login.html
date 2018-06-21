@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>Login Application</title>
+    </head>
+    <body>
+        <h1>Application </h1>
+        <br>
+
+        <h2> Enter the Data</h2>
+            <form action="{% url 'todolist:login' %}" method="post">
+                {% csrf_token %}
+                    <table>
+                        {{ form.as_p }}
+                    </table>
+                <input type="submit" value="Submit">
+            </form>
+    </body>
+</html>
+
